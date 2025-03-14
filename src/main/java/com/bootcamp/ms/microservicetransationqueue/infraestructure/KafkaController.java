@@ -1,6 +1,5 @@
 package com.bootcamp.ms.microservicetransationqueue.infraestructure;
 
-import com.bootcamp.ms.commons.entity.CardDebit;
 import com.bootcamp.ms.microservicetransationqueue.domain.TransactionQueueBc;
 import com.bootcamp.ms.microservicetransationqueue.producer.KafkaStringProducer;
 import com.bootcamp.ms.microservicetransationqueue.service.TransactionQueueBcService;

@@ -1,25 +1,26 @@
-package com.bootcamp.ms.microservicetransationqueue.domain;
+package com.bootcamp.ms.microservicetransationqueue.entity;
 
-import com.bootcamp.ms.microservicetransationqueue.entity.RequestQueueBc;
 import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDate;
 
-@Document(collection = "transactionQueue")
+@Document(collection = "requestQueue")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class TransactionQueueBc {
+public class RequestQueueBc {
 
     @Id
     private String id;
-    private RequestQueueBc requestQueueBc;
-    private double amountConvert;
     private LocalDate date;
+    private double amount;
+    private String typePay;
     private int flag;
+    private String idWallteBc;
+    private BootCoin bootCoin;
 
 }
