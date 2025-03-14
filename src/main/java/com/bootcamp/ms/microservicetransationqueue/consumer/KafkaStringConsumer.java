@@ -20,7 +20,7 @@ public class KafkaStringConsumer {
 
     @KafkaListener(topics = "bootcamp-Topic3" , groupId = "group_id3")
     public void consume2(TransactionQueueBc message) {
-        logger.info("Actualizando monto del monedero 3...");
+        logger.info("Actualizando monto del monedero en topic 3...");
             double amountTemp = message.getRequestQueueBc().getAmount();
             message.setDate(LocalDate.now());
             message.setAmountConvert(amountTemp*3.93);
